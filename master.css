@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+@import url("https://fonts.googleapis.com/css?family=Exo+2");
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  background: rgb(253, 253, 255);
+}
+
+ul.card {
+  position: relative;
+  left: 50%;
+  width: calc(70% - 8em);
+  margin-top: 4em;
+  padding: 1em;
+  list-style-position: outside;
+  list-style-type: none;
+  transform: translateX(-50%);
+  box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.3);
+}
+
+ul:last-child {
+  margin-bottom: 4em;
+}
+
+ul.card li {
+  font-family: "Exo 2", sans-serif;
+  padding: 1em;
+}
+
+ul.card li:first-child {
+  font-family: "Rubik", sans-serif;
+  font-size: 3em;
+  padding: 1em;
+  text-align: center;
+}
+
+ul.card li:last-child {
+  padding-bottom: 4em;
+}
+
+ul.card li > div.top {
+  font-size: 1.5em;
+  top: 50%;
+  width: 100%;
+  transform: translateY(25%);
+  text-align: center;
+}
+
+ul.card li:hover > div.top {
+  font-weight: 600;
+}
+
+ul.card li > div.bottom {
+  position: relative;
+  width: 100%;
+  height: 0;
+  transition: all 0.3s ease;
+  color: transparent;
+}
+
+ul.card li:hover > .bottom {
+  height: 4em;
+  color: inherit;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+div.bottom > a {
+  position: absolute;
+  top: 2em;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+div.bottom > a:first-child {
+  left: 25%;
+}
+
+div.bottom > a:last-child {
+  right: 25%;
+}
+
+div.title {
+  position: relative;
+  height: auto;
+  margin: 4em;
+}
+
+div.title > p {
+  line-height: 0.8em;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+div.title > p:first-child {
+  font-size: 5em;
+}
+
+div.title > p:last-child {
+  font-size: 1.5em;
+}
+
+div.bottom > a:after {
+  position: absolute;
+  bottom: -2px;
+  left: -0.5em;
+  width: calc(100% + 1em);
+  height: 2px;
+  content: "";
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  background: rgb(0, 0, 0);
+}
+
+div.bottom > a:hover::after {
+  transition: opacity 0.5s ease;
+  background: rgb(0, 0, 0);
+}
+
+li:first-child > span {
+  position: absolute;
+  left: 50%;
+  display: block;
+  transform: translateX(-50%);
+}
+
+div.goUp {
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  width: 4em;
+  height: 4em;
+  transition: all 0.5s ease;
+  opacity: 0;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 100%;
+  background-color: transparent;
+}
+
+div.arrow {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  transform: translateX(-50%) translateY(-35%) rotate(45deg);
+  border-top: 4px solid rgba(0, 0, 0, 0.5);
+  border-left: 4px solid rgba(0, 0, 0, 0.5);
+}
+
+div.goUp:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+div.goUp:hover div.arrow {
+  border-top: 4px solid rgba(1, 1, 1, 0.5);
+  border-left: 4px solid rgba(1, 1, 1, 0.5);
+}
+
+ul.menu {
+  position: relative;
+  left: 50%;
+  display: inline-flex;
+  width: calc(70% - 8em);
+  margin-top: 1em;
+  padding: 1em;
+  list-style-position: outside;
+  list-style-type: none;
+  transform: translateX(-50%);
+  box-shadow: none;
+}
+
+ul.menu > li {
+  min-width: calc(100% / 5);
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+ul.menu > li:last-child {
+  border-right: none;
+}
+
+ul.menu a {
+  top: 2em;
+  display: block;
+  width: 100%;
+  height: 2em;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul.menu::after {
+  position: absolute;
+  bottom: -0.5em;
+  left: 4em;
+  display: block;
+  width: calc(100% - 8em);
+  height: 2px;
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+}
